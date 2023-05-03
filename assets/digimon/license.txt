@@ -1,0 +1,11 @@
+Model Information:
+* title:	Agumon WIP
+* source:	https://sketchfab.com/3d-models/agumon-wip-9a0b40130d3b40789cf0cd2338beb1c8
+* author:	Jade L (https://sketchfab.com/3levan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Agumon WIP" (https://sketchfab.com/3d-models/agumon-wip-9a0b40130d3b40789cf0cd2338beb1c8) by Jade L (https://sketchfab.com/3levan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
