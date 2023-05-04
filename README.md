@@ -10,14 +10,14 @@ Theme : Digimon
 
 3 Material Property :
 
-- MeshStandard
+- MeshPhong
 - MeshBasic
 - MeshNormal
 
 Minimal ada 2 jenis light
 
 - Ambient Light
-- Directional Light
+- Spotlight
 
 Shadow Implementation :
 
@@ -26,16 +26,17 @@ Shadow Implementation :
 At least 2 Camera POV :
 
 - Default Camera
-- Agumon POV
+- Object POV
 
 Raycast Implementation :
 
-- Change Camera to Agumon POV when space is pressed
-- Change back to default camera when pressing again
+- Change Camera to Agumon POV when pressing agumon object
+- Change back to default camera when pressing space
 
 3D Model Implementation :
 
 - Agumon
+- Clock
 
 SkyBox Implementation :
 
