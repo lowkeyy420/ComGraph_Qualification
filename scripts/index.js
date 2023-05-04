@@ -11,7 +11,7 @@ const defaultCamera = new THREE.PerspectiveCamera(
   1000
 );
 defaultCamera.lookAt(0, 0, 0);
-defaultCamera.position.set(0, 8, 8);
+defaultCamera.position.set(-7.7, 3.3, 5.4);
 
 const PovCamera = new THREE.PerspectiveCamera(
   75,
@@ -100,7 +100,6 @@ function addAmbientLight() {
 addAmbientLight();
 
 let floor;
-let target;
 
 function addFloor() {
   const geometry = new THREE.PlaneGeometry(100, 100);
@@ -129,11 +128,11 @@ function addFloor() {
 }
 addFloor();
 
-function addDigimon(object) {
+function addObject(object, scale, position, name) {
   let model = object.scene;
-  model.scale.set(4, 4, 4);
-  model.position.set(0, 0.1, 0);
-  model.name = "digimon";
+  model.scale.set(scale[0], scale[1], scale[2]);
+  model.position.set(position[0], position[1], position[2]);
+  model.name = name;
   model.castShadow = true;
   model.receiveShadow = true;
 
@@ -143,6 +142,7 @@ function addDigimon(object) {
 let loader = new GLTFLoader();
 let clock = new THREE.Clock();
 
+//Load Agumon
 loader.load(
   "../assets/digimon/scene.gltf",
   (object) => {
@@ -162,7 +162,21 @@ loader.load(
 
     animate();
 
-    addDigimon(object);
+    addObject(object, [4, 4, 4], [0, 0.1, 0], "digimon");
+  },
+  undefined,
+  (error) => {
+    console.error(error);
+  }
+);
+
+//Load Clock
+loader.load(
+  "../assets/clock/scene.gltf",
+  (object) => {
+    let model = object.scene;
+    model.rotateY(5);
+    addObject(object, [0.01, 0.01, 0.01], [6, 1.5, 0], "digimon");
   },
   undefined,
   (error) => {
@@ -189,6 +203,7 @@ addDirectionalLight(0, 5, 10, 0xffa500, 0.5);
 function render() {
   renderer.render(scene, currentCamera);
   requestAnimationFrame(render);
+  console.log(currentCamera.position);
 }
 
 render();
@@ -210,4 +225,5 @@ function addRaycast() {
     });
   });
 }
+
 addRaycast();
